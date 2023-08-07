@@ -1,0 +1,25 @@
+{
+  "name": "job-post-app",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
+    "db:migration:generate": "npm run typeorm -- migration:generate",
+    "db:migration:run": "npm run typeorm -- migration:run",
+    "db:migration:revert": "npm run typeorm -- migration:revert",
+    "db:refresh": "npm run typeorm schema:drop && npm run db:migration:run"
+  },
+  "dependencies": {
+    "@nestjs/config": "^2.2.0",
+    "@nestjs/typeorm": "^9.0.1",
+    "@nestjsx/crud": "^5.0.0-alpha.3",
+    "@nestjsx/crud-typeorm": "^5.0.0-alpha.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "mongoose": "^6.8.3",
+    "typeorm": "^0.3.11"
+  }
+}
